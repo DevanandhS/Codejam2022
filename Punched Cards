@@ -1,0 +1,22 @@
+t=int(input())
+for z in range(t):
+    a,b=input().split()
+    a=int(a)
+    b=int(b)
+    print("Case #"+str(z+1)+":")
+    for i in range(a*2+1):
+        for j in range(b*2+1):
+            if (i==0 and j==0) or (i==0 and j==1) or (i==1 and j==0) or (i==1 and j==1):
+                print(".",end="")
+            else:
+                if i%2==0:
+                    if j%2==0:
+                        print("+",end="")
+                    else:
+                        print("-",end="")
+                else:
+                    if j%2==0:
+                        print("|",end="")
+                    else:
+                        print(".",end="")
+        print()
